@@ -9,7 +9,7 @@ from airflow.operators.bash import BashOperator
 
 # 분,시,일,월,요일
 with DAG(
-    dag_id="dags_conn_test",
+    dag_id="dags_bash_select_fruit",
     schedule=None,
     start_date=pendulum.datetime(2024, 10, 6, tz="Asia/Seoul"),
     catchup=False,
