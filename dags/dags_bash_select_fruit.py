@@ -16,9 +16,9 @@ with DAG(
 ) as dag:
     t1 = BashOperator(
         task_id="t1_orange",
-        basg_command="/opt/airflow/plugins/shell/select_fruit.sh ORANGE"
+        bash_command="/opt/airflow/plugins/shell/select_fruit.sh ORANGE"  # 오타 수정
     )
     t2 = BashOperator(
         task_id="t2_avocado",
-        basg_command="/opt/airflow/plugins/shell/select_fruit.sh AVOCADO"
+        bash_command="/opt/airflow/plugins/shell/select_fruit.sh AVOCADO"  # 오타 수정
     )
