@@ -10,8 +10,8 @@ from airflow.operators.bash import BashOperator
 # 분,시,일,월,요일
 with DAG(
     dag_id="dags_bash_select_fruit",
-    schedule=None,
-    start_date=pendulum.datetime(2024, 10, 6, tz="Asia/Seoul"),
+    schedule="10 0 * * 6#1",
+    start_date=pendulum.datetime(2023, 3, 1, tz="Asia/Seoul"),
     catchup=False,
 ) as dag:
     t1 = BashOperator(
